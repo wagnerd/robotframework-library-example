@@ -27,3 +27,4 @@ coverage/*
 log.html
 report.html
 output.xml
+doc/libdoc

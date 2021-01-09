@@ -13,8 +13,16 @@ class Library1():
         return True
 
     @keyword
-    def another_example(self, arg1: str, arg2: str ='default') -> bool:
-        """Keyword documentation."""
+    def another_example(self, arg1: str, arg2: str ='defaultArg') -> bool:
+        """
+        Keyword documentation text.
+        ----
+        :param arg1: \n
+        :param arg2:
+        ----
+        Examples:
+        | Another Example | arg1 | arg2 |
+        """
         self.not_keyword()
         print(arg1)
         print(arg2)

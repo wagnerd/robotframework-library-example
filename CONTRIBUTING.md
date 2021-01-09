@@ -5,19 +5,19 @@
 First create a virtual environment:
 
 ```bash
-python -m venv venv
+robotframework-library-example$ python -m venv venv
 ```
 
 If the venv is not activated automatically, run:
 
 ```bash
-venv\Scripts\activate
+robotframework-library-example$ venv\Scripts\activate
 ```
 
 You can simply install the package in editable mode from inside the venv:
 
 ```bash
-pip install -e .
+robotframework-library-example$ pip install -e .
 ```
 
 This will also install the required packages listed in [setup.cfg](setup.cfg) as `install_requires`.
@@ -27,7 +27,7 @@ But consider that changes to the setup files are only applied if you reinstall t
 If you want to create the package run:
 
 ```bash
-python setup.py sdist
+robotframework-library-example$ python setup.py sdist
 ```
 
 This project uses tox to run different environments:
@@ -41,18 +41,21 @@ This project uses tox to run different environments:
 So in order to run the test simply install tox in your venv:
 
 ```bash
-pip install tox
+robotframework-library-example$ pip install tox
 ```
 
 After that just run
 ```bash
-tox
+robotframework-library-example$ tox
 ```
 
 Look at the [tox.ini](tox.ini) file at the [testenv] section if you want to know what
 is executed inside the tox environment and which python versions are tested.
 
-The example output for a successfull run below:
-```bash
+For the creation of the documentation we use the tox section [testenv:doc] which can simply be run with
 
+```bash
+tox -e doc
 ```
+
+This will create a folder **doc/libdoc** which contains the created keyword documentation and can be exported.
