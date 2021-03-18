@@ -52,6 +52,8 @@ robotframework-library-example$ tox
 Look at the [tox.ini](tox.ini) file at the [testenv] section if you want to know what
 is executed inside the tox environment and which python versions are tested.
 
+## Documentation
+
 For the creation of the documentation we use the tox section [testenv:doc] which can simply be run with
 
 ```bash
@@ -59,3 +61,13 @@ tox -e doc
 ```
 
 This will create a folder **doc/libdoc** which contains the created keyword documentation and can be exported.
+
+## Acceptance Tests
+
+Run
+
+```bash
+robot --loglevel DEBUG atest
+```
+
+The `--loglevel DEBUG` will show you full traceback on errors.
