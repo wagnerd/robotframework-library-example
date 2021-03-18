@@ -3,11 +3,15 @@
 from robotlibcore import DynamicCore, keyword
 from robot.api.deco import library
 from DynamicCoreLibrary.mystuff import Library1, Library2
-
+from robot.api import logger
 
 @library
 class DynamicCoreLibrary(DynamicCore):
-    """General library documentation."""
+    """
+    General library documentation.
+    
+    This class will manage all registered keyword classes.
+    """
 
     def __init__(self) -> None:
         libraries = [Library1(), Library2()]
@@ -21,5 +25,5 @@ class DynamicCoreLibrary(DynamicCore):
         Examples:
         | Keyword in main |
         """
-        print(self.__class__)
+        logger.info(self.__class__)
         return True

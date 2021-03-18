@@ -12,4 +12,5 @@ Keyword names
     Log    ${LIBRARY}
     Keyword in main
     Example
+    Another Example    arg1
     Custom name

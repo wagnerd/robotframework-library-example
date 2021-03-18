@@ -1,7 +1,7 @@
 """Library components."""
 
 from robotlibcore import keyword
-
+from robot.api import logger
 
 class Library1():
     """Class documentation."""
@@ -24,13 +24,15 @@ class Library1():
         | Another Example | arg1 | arg2 |
         """
         self.not_keyword()
-        print(arg1)
-        print(arg2)
+        logger.info(arg1)
+        logger.info(arg2)
+        logger.debug("This will be debug")
         return True
 
     def not_keyword(self) -> bool:
         """Keyword documentation."""
-        print(self.__class__)
+        logger.info(self.__class__)
+        logger.debug("This will be debug2")
         return True
 
 
@@ -51,5 +53,5 @@ class Library2():
 
     def not_keyword(self) -> bool:
         """Keyword documentation."""
-        print(self.__class__)
+        logger.info(self.__class__)
         return True
